@@ -2,11 +2,6 @@
 import machine
 import sys, os
 
-def spaceLeft():
-    l = os.statvfs('')
-    print('filesystem size: {} kB'.format((l[0]*l[2])//1024))
-    print('free space     : {} kB'.format((l[0]*l[3])//1024))
-
 # mise a jour de sys.path
 def update_path(path):
     if path not in sys.path:
