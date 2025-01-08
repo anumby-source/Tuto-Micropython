@@ -7,12 +7,12 @@ class moteurCC:
         self.inb = Pin(pin2, Pin.OUT)
         self.en  = PWM(en, freq=1000, duty=0)
 
-    def avant(self, vit):   # vit=duty, entre 0 et 1023
+    def avance(self, vit):   # vit=duty, entre 0 et 1023
         self.ina.on()
         self.inb.off()
         self.en.duty(vit)
 
-    def arriere(self, vit): # vit=duty, entre 0 et 1023
+    def recule(self, vit): # vit=duty, entre 0 et 1023
         self.ina.off()
         self.inb.on()
         self.en.duty(vit)
